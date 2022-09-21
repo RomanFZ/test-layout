@@ -1,0 +1,132 @@
+.section-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 106px;
+}
+
+.gallery-container {
+    width: 100%;
+}
+
+.gallery-container__heading {
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.gallery-container__description {
+    margin-bottom: 70px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.gallery-slider {
+    width: 100%;
+    padding: 0 63px;
+    cursor: pointer;
+}
+
+.filter-button-all {
+    display: none;
+}
+
+.gallery-filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filter-button {
+    padding: 11px 16px;
+    background-color: var(--color-gray);
+    margin-right: 9px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color .2s ease-in, color .2s ease-in;
+}
+
+.filter-button:hover {
+    background-color: var(--color-blue);
+    color: #FFFFFF;
+}
+
+.hover-button {
+    background-color: var(--color-blue);
+    color: #FFFFFF;
+}
+
+.slick-list {
+    margin: 0 -15px;
+}
+
+.slick-slide>div {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+    line-height: 0;
+    color: #E6E6E6;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: var(--color-blue);
+}
+
+.slick-dots {
+    bottom: -73px;
+}
+
+.slick-prev {
+    top: 50%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.slick-next {
+    top: 54%;
+    right: 6%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: "Gilroy";
+    font-size: 35px;
+    line-height: 1;
+    opacity: 1;
+    color: var(--color-blue);
+}
+
+.slick-prev:hover:before, .slick-next:hover:before, .slick-prev:focus:before, .slick-next:focus:before {
+    color: #FFFFFF;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+     background: var(--color-blue);
+}
+
+.slick-slider > .slick-arrow {
+    display: none !important;
+}
+
+.slick-slider:hover >  .slick-arrow {
+    display: block !important;
+}
+
+
+

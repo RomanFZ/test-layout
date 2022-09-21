@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Layout</title>
+    <link rel="stylesheet" type="text/css" href="./css/lib/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/lib/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/lib/loading-bar.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script defer src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script defer type="text/javascript" src="js/lib/loading-bar.js"></script>
+    <script defer src="js/lib/imask.js"></script>
+    <script defer src="js/lib/slick.min.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+<header class="header">
+    <div class="container header-container">
+        <div class="header-container-up">
+            <nav class="menu">
+                <a href="#table" class="menu__item">Таблица</a>
+                <a href="#form" class="menu__item">Форма</a>
+                <a href="#gallery" class="menu__item">Галерея</a>
+            </nav>
+        </div>
+        <div class="header-container-down">
+            <div class="page-description">
+                <a class="page-description__link">Главная</a> /
+                <a class="page-description__link">Тестовое задание</a>
+            </div>
+            <h1 class="header-heading">Тестовое задание</h1>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="section-table" id="table">
+        <div class="container table-container">
+            <h2 class="table-container__heading">Таблица</h2>
+            <p class="table-container__description">Должна быть адаптивной, без дублирования информации.</p>
+            <table class="table">
+                <thead class="table__head">
+                <tr class="table__headings">
+                    <th class="table__column-heading table__cell_fix">Название</th>
+                    <th class="table__column-heading">Материал</th>
+                    <th class="table__column-heading">Размер</th>
+                    <th class="table__column-heading table__cell_fix-price">Цена</th>
+                    <th class="table__column-heading table__cell_fix-button"></th>
+                </tr>
+                </thead>
+                <tbody class="table__body">
+                <tr class="table__row">
+                    <td data-label="Название" class="table__cell table__cell_fix">Стеновой паркет</td>
+                    <td data-label="Материал" class="table__cell">Ольха</td>
+                    <td data-label="Размер" class="table__cell">13 × 78 × 300 мм</td>
+                    <td data-label="Цена" class="table__cell">52 ₽</td>
+                    <td data-label="" class="table__cell table__cell_button">
+                        <button class="table__cell-button">
+                            В корзину
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td data-label="Название" class="table__cell table__cell_fix">Стеновой паркет</td>
+                    <td data-label="Материал" class="table__cell">Ольха</td>
+                    <td data-label="Размер" class="table__cell">13 × 78 × 600 мм</td>
+                    <td data-label="Цена" class="table__cell table__cell_price">112 ₽</td>
+                    <td data-label="" class="table__cell table__cell_button">
+                        <button class="table__cell-button">
+                            В корзину
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td data-label="Название" class="table__cell table__cell_fix">Доска для пола, сорт А</td>
+                    <td data-label="Материал" class="table__cell">Лиственница</td>
+                    <td data-label="Размер" class="table__cell">27 × 134 × 2000 мм</td>
+                    <td data-label="Цена" class="table__cell">1062 ₽</td>
+                    <td data-label="" class="table__cell table__cell_button">
+                        <button class="table__cell-button">
+                            В корзину
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td data-label="Название" class="table__cell table__cell_fix">Вагонка</td>
+                    <td data-label="Материал" class="table__cell">Термо-абаш</td>
+                    <td data-label="Размер" class="table__cell">19 × 90 × 2000 мм</td>
+                    <td data-label="Цена" class="table__cell">1009 ₽</td>
+                    <td data-label="" class="table__cell table__cell_button">
+                        <button class="table__cell-button">
+                            В корзину
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="section-form" id="form">
+        <div class="container form-container">
+            <h2 class="form-container__heading">Форма</h2>
+            <p class="form-container__description">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. </p>
+            <form class="form">
+                <h3 class="form__heading">
+                    Заказать проект
+                </h3>
+                <div class="form__label form__label_name">
+                    <label>Название
+                        <input class="form__input form__input_name">
+                    </label>
+                </div>
+                <div class="form__content form__content_up">
+                    <label class="form__label form__label_price">Стоимость
+                        <input id="num" class="form__input form__input_price" type=number min="10000000" max="40000000" step="10000000" value="20000000">
+                        <input id="range" class="form__input form__input_price-range" type="range" min="10000000" max="40000000" step="10000000" value="20000000">
+                        <span class="price-range price-range-10">10</span><span class="price-range price-range-20">20</span><span class="price-range price-range-30">30</span><span class="price-range price-range-40">40+</span>
+                    </label>
+                    <label for="square" class="form__label form__label_square">Площадь
+                        <span class="form__label_square-group">
+                                    <input value="-" type="button" class="button-square button-square-minus">
+                                    <input id="square" class="form__input form__input_square" type=text value="200m3">
+                                    <input value="+" type="button" class=" button-square button-square-plus">
+                                </span>
+                    </label>
+                    <div class="form__label_decoration-fix">
+                        <div class="form__label_decoration-heading">Отделка</div>
+                        <div class="form__label_decoration-group">
+                            <input id="check" type="checkbox" checked class="form__input form__input_decoration">
+                            <label for="check" class="form__label form__label_decoration">Отделка</label>
+                            <span class="form__label-decoration__text">Вайтбокс</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__content form__content_center">
+                    <label class="form__label form__label_tel">Телефон
+                        <input class="form__input form__input_tel" type="tel" value="+7">
+                        <svg class="form__input_tel-check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                    <label class="form__label form__label_mail">Почта
+                        <input class="form__input form__input_mail">
+                        <span class="form__input_mail-clear">x</span>
+                    </label>
+                </div>
+                <div class="form__label_add-files-row">
+                    <div class="form__label_add-files-heading">Приложить файлы</div>
+                    <label class="form__label_add-files">
+                        <input accept="image/jpeg" type="file" name="file[]" class="form__input form__input_add-files" multiple>
+                        <span>Кликните или перенесите файлы в эту область.
+Только JPG, до 1 Мб</span>
+                    </label>
+                    <div class="form__label_add-files-list"></div>
+                </div>
+                <div class="form__content form-content_down">
+
+                    <div class="select">
+                        <label class="form__label form__label_amenities">Удобства</label>
+                        <input class="select__input" type="hidden" name="">
+                        <div class="select__head">Любые</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Любые</li>
+                            <li class="select__item">Кирпичный</li>
+                            <li class="select__item">Деревянный</li>
+                            <li class="select__item">Монолитный</li>
+                            <li class="select__item">Каркасный</li>
+                            <li class="select__item">Щитовой</li>
+                        </ul>
+                    </div>
+                    <label class="form__label form__label_password">Пароль
+                        <input type="password" id="password-input" class="form__input form__input_password">
+                        <span class="form__input_password-eye"></span>
+                    </label>
+                </div>
+                <div class="form__label form__label_wishes">
+                    <label>Пожелания
+                        <input placeholder="укажите через запятую" class="form__input form__input_wishes">
+                        <span class="form__input_wishes-prompt-all">
+                         <span class="form__input_wishes-prompt">Кондиционер Х</span>
+                        <span class="form__input_wishes-prompt">Холодильник Х</span>
+                        <span class="form__input_wishes-prompt">Интернет Х</span>
+                    </span>
+                    </label>
+                </div>
+                <div class="form__button-container">
+                    <button class="form__button">
+                        Отправить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="section-gallery" id="gallery">
+        <div class="container gallery-container">
+            <h2 class="gallery-container__heading">Галерея</h2>
+            <p class="gallery-container__description">
+                Фильтры должны фильтровать изображения без перезагрузки.  Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото.
+            </p>
+            <div class="gallery-filter-buttons">
+                <button class="filter-button filter-button-all" value="reset">Все</button>
+                <button class="filter-button" value="bath">Баня</button>
+                <button class="filter-button" value="sauna">Сауна</button>
+                <button class="filter-button" value="hammam">Хаммам</button>
+                <button class="filter-button" value="hammam">Хаммам</button>
+            </div>
+        </div>
+        <div class="gallery-slider">
+            <div class="slick-thumb-wrap">
+                <div class="slick-thumb filter-target">
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile1.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image1.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile3.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image3.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image4.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="hammam">
+                        <picture>
+                            <source srcset="img/mobile/mobile1.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image5.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="study">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image6.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="sauna">
+                        <picture>
+                            <source srcset="img/mobile/mobile3.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image7.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image8.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="hammam">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image8.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile1.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image1.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="sauna">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image2.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image8.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="sport">
+                        <picture>
+                            <source srcset="img/mobile/mobile3.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image3.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image4.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="sauna">
+                        <picture>
+                            <source srcset="img/mobile/mobile1.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image5.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="sauna">
+                        <picture>
+                            <source srcset="img/mobile/mobile2.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image6.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="study">
+                        <picture>
+                            <source srcset="img/mobile/mobile3.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image7.png" alt="картина">
+                        </picture>
+                    </div>
+                    <div data-filter="bath">
+                        <picture>
+                            <source srcset="img/mobile/mobile4.png" media="(max-width: 449px) and (min-width: 320px)">
+                            <img class="link-slide-image" src="img/image8.png" alt="картина">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>

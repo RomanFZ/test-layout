@@ -1,0 +1,546 @@
+.section-form {
+    display: flex;
+    justify-content: center;
+    padding-top: 104px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container__heading {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.form-container__description {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.form {
+    width: 840px;
+    border-radius: 4px;
+    padding: 81px 92px 95px 98px ;
+    background-color: var(--color-gray);
+}
+
+.form__heading {
+    margin-bottom: 47px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.form__content {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.form__label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form__input {
+    display: block;
+    height: 56px;
+    margin-top: 10px;
+    border: 1px solid #E1E1E1;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*.form__label_name {*/
+/*    grid-area: form__label_name;*/
+/*}*/
+
+.form__label_price {
+    position: relative;
+    margin-right: 30px;
+}
+
+.form__label_square {
+    margin-right: 30px;
+}
+/*.form__label_decoration-fix {*/
+/*    grid-area: form__label_decoration-fix;*/
+/*}*/
+
+.form__label_amenities {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form__label_password {
+    position: relative;
+    width: 100%;
+}
+
+.form__label_wishes {
+    position: relative;
+    width: 100%;
+}
+
+.form__input_name {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    height: 56px;
+    margin-bottom: 43px;
+}
+
+.form__input_price {
+    width: 222px;
+    padding: 0 60px;
+    margin-top: 10px;
+    border: 1px solid #E1E1E1;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.form__input_price::-webkit-outer-spin-button,
+.form__input_price::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form__input_price[type=number]{
+    -moz-appearance: textfield;
+}
+
+.form__input_price-range {
+    position: absolute;
+    top: 74px;
+    left: -2px;
+    width: 222px;
+    height: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.price-range {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #58585D;
+}
+
+.price-range-10 {
+    margin-right: 57px;
+}
+
+.price-range-20 {
+    margin-right: 56px;
+}
+
+.price-range-30 {
+    margin-right: 49px;
+}
+
+.form__label_square-group {
+    display: flex;
+    margin-top: 10px;
+}
+
+.form__input_square {
+    width: 112px;
+    padding-left: 27px;
+    margin-top: 0;
+}
+
+.button-square {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #E1E1E1;
+    background-color: #ffffff;
+    color: var(--color-blue);
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color .2s ease-in, color .2s ease-in;
+}
+
+.button-square:hover {
+    color: #ffffff;
+    background-color: var(--color-blue);
+}
+
+.button-square-minus {
+    border-right: none;
+}
+
+.button-square-plus {
+    border-left: none;
+}
+
+.form__label_decoration-group {
+    display: flex;
+    margin-bottom: 26px;
+}
+
+.form__input_decoration {
+    display: none;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.form__label_decoration {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 44px;
+    height: 24px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.form__label_decoration:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.form__input_decoration:checked + .form__label_decoration {
+    background: var(--color-blue);
+}
+
+.form__input_decoration:checked + .form__label_decoration:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
+
+.form__label_decoration:active:after {
+    width: 35px;
+}
+
+.form__label_decoration-heading {
+    margin-bottom: 27px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form__label_decoration-fix {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label-decoration__text {
+    margin-left: 10px;
+}
+
+.form__label_tel {
+    position: relative;
+}
+
+.form__input_tel {
+    width: 222px;
+    margin-right: 30px;
+}
+
+.form__input_tel-check {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+}
+
+.show {
+    display: block;
+}
+
+.form__label_mail {
+    position: relative;
+    width: 100%;
+}
+
+.form__input_mail-clear {
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 25px;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.show-button {
+    display: block;
+}
+
+.form__input_mail {
+    width: 100%;
+}
+
+.form__input_add-files {
+    width: 100%;
+    height: 112px;
+    margin-bottom: 42px;
+    border: 1px dashed #B9B1B1;
+}
+
+.form__label_add-files-heading {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/*sadasd*/
+.form__label_add-files-row {
+    width: 100%;
+    display: inline-block;
+}
+
+.form__label_add-files {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.form__label_add-files span {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px dashed #B9B1B1;
+    background-color: transparent;
+    line-height: 22px;
+    border-radius: 4px;
+    height: 112px;
+    padding: 32px 160px;
+    box-sizing: border-box;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+.form__label_add-files input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+/* Focus */
+.form__label_add-files input[type=file]:focus + span {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Hover/Active */
+.form__label_add-files:hover span {
+    background-color: var(--color-light-blue);
+}
+.form__label_add-files:active span {
+    background-color: var(--color-light-blue);
+}
+
+/* Disabled */
+.form__label_add-files input[type=file]:disabled + span {
+    background-color: #eee;
+}
+
+/* Список файлов */
+
+.ldBar {
+  display: inline-block;
+}
+.form__label_add-files-list {
+    padding: 10px 0;
+    margin-bottom: 28px;
+}
+.form__label_add-files-list-item {
+    margin-bottom: 10px;
+}
+.form__label_add-files-list-remove {
+    color: var(--color-blue);
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.ldBar-label {
+    display: none;
+}
+
+/*asdsad*/
+.form__select {
+    height: 56px;
+    width: 309px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #E1E1E1;
+    appearance: none;
+    overflow: hidden;
+    background-image: url('../img/Selectarow.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+}
+
+.select {
+    position: relative;
+    display: block;
+    min-width: 220px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.select__head {
+    width: 309px;
+    max-width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    height: 56px;
+    padding: 18px 15px;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.select__head::after {
+    width: 21px;
+    height: 11px;
+    background: #FFF url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.50495 5.78413L0.205241 1.25827C-0.0684138 0.970375 -0.0684138 0.503596 0.205241 0.215836C0.478652 -0.0719461 0.922098 -0.071946 1.19549 0.215837L5.00007 4.22052L8.80452 0.215953C9.07805 -0.0718292 9.52145 -0.0718292 9.79486 0.215953C10.0684 0.503736 10.0684 0.970492 9.79486 1.25839L5.49508 5.78425C5.35831 5.92814 5.17925 6 5.00009 6C4.82085 6 4.64165 5.928 4.50495 5.78413Z' fill='blue'/%3E%3C/svg%3E%0A") no-repeat center / cover;
+    position: absolute;
+    right: 10%;
+    bottom: 31%;
+    transform: translateY(50%);
+    content: '';
+    display: block;
+    transition: .2s ease-in;
+}
+
+.select__head.open::after {
+    transform: translateY(50%) rotate(180deg);
+}
+
+.select__list {
+    display: none;
+    position: absolute;
+    width: 309px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 5px;
+    max-height: 205px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #424348;
+    scrollbar-color: dark;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+}
+
+.select__list::-webkit-scrollbar {
+    width: 7px;
+    padding: 5px;
+}
+
+.select__list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-blue);
+}
+
+.select__list .select__item {
+    position: relative;
+    border-top: 1px solid rgba(224, 229, 231, 0.5);
+    padding: 10px 15px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.select__list .select__item:hover {
+    background-color: rgba(224, 229, 231, 0.5);
+}
+
+
+
+.form__input_password {
+    width: 100%;
+}
+
+.form__input_password-eye {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 42%;
+    right: 7%;
+    background-image: url("../img/eye-off.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.form__input_wishes {
+    width: 100%;
+
+}
+
+.form__input_wishes-prompt-all {
+    position: absolute;
+    display: none;
+    margin-top: 13px;
+}
+
+.show-wishes {
+    display: block;
+}
+
+.form-content_down {
+    margin-bottom: 20px;
+}
+
+.form__input_wishes-prompt {
+    width: 160px;
+    height: 32px;
+    padding: 5px 16px 9px;
+    color: white;
+    background: #6f6f74;
+    border-radius: 50px;
+    /*display: none;*/
+}
+
+.form__button {
+    display: block;
+    padding: 17px 23px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-blue);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+}
+
+.form__button:hover {
+    background-color: var(--color-light-blue);
+}
